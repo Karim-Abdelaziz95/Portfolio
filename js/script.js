@@ -1,75 +1,69 @@
 (() => {
   const year = document.getElementById("year");
-  if (year) year.textContent = String(new Date().getFullYear());
+  if (year) year.textContent = new Date().getFullYear();
 
-  // Mobile nav toggle
   const toggle = document.querySelector(".nav__toggle");
   const menu = document.getElementById("navMenu");
   if (toggle && menu) {
     toggle.addEventListener("click", () => {
-      const isOpen = menu.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+      const open = menu.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(open));
     });
-
-    // Close menu on link click
-    menu.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => {
+    menu.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", () => {
         menu.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+      }),
+    );
+  }
+
+  const items = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
       });
+    },
+    { threshold: 0.12 },
+  );
+  items.forEach((item) => observer.observe(item));
+
+  const glow = document.querySelector(".cursor-glow");
+  if (glow && window.matchMedia("(pointer:fine)").matches) {
+    window.addEventListener("pointermove", (e) => {
+      glow.style.left = `${e.clientX}px`;
+      glow.style.top = `${e.clientY}px`;
+      glow.style.opacity = "1";
     });
   }
+})();
 
-  // Simple typewriter effect for the hero headline
-  const typeEl = document.querySelector(".type");
-  if (!typeEl) return;
-
-  const phrases = ["Web Developer", "UI Engineer", "Frontend & Integration"];
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
-
-  const prefersReduced = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
-  if (prefersReduced) {
-    typeEl.textContent = phrases[0];
-    return;
-  }
-
-  const tick = () => {
-    const current = phrases[phraseIndex];
-    if (!deleting) {
-      charIndex = Math.min(current.length, charIndex + 1);
-      typeEl.textContent = current.slice(0, charIndex);
-      if (charIndex === current.length) {
-        deleting = true;
-        setTimeout(tick, 900);
-        return;
-      }
-      setTimeout(tick, 45);
-    } else {
-      charIndex = Math.max(0, charIndex - 1);
-      typeEl.textContent = current.slice(0, charIndex);
-      if (charIndex === 0) {
-        deleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-      }
-      setTimeout(tick, 26);
-    }
+// Scroll progress + subtle tilt for project cards.
+(() => {
+  const header = document.querySelector(".header");
+  const cards = document.querySelectorAll(".project");
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = max > 0 ? window.scrollY / max : 0;
+    header?.style.setProperty("--scroll-progress", progress);
   };
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
 
-  tick();
-
-  // Demo contact form (front-end only)
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("formStatus");
-  if (form && status) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      status.textContent =
-        "Thanks! This form is a front-end demo. Connect it to your backend to send messages.";
-      form.reset();
+  if (window.matchMedia("(pointer:fine)").matches) {
+    cards.forEach((card) => {
+      card.addEventListener("pointermove", (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateX(${(-y * 2.5).toFixed(2)}deg) rotateY(${(x * 3).toFixed(2)}deg) translateY(-7px)`;
+      });
+      card.addEventListener("pointerleave", () => {
+        card.style.transform = "";
+      });
     });
   }
 })();

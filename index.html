@@ -1,40 +1,43 @@
-<!-- ©𝕂𝕒𝕣𝕚𝕞 𝔸𝕓𝕕𝕖𝕝𝕒𝕫𝕚𝕫 𝔽𝕒𝕣𝕠𝕦𝕜 -->
-
 <!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karim Abdelaziz Farouk | Web Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
   <meta name="description"
-    content="Portfolio of Karim Abdelaziz Farouk — Web Developer. Projects, skills, and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    content="Portfolio of Karim Abdelaziz Farouk — Web Developer focused on clean interfaces, performance, and maintainable code.">
+  <title>Karim Abdelaziz — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="header" role="banner">
+  <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__text">© 𝕂𝕒𝕣𝕚𝕞 𝔸𝕓𝕕𝕖𝕝𝕒𝕫𝕚𝕫 𝔽𝕒𝕣𝕠𝕦𝕜</span>
+      <a class="brand" href="#top" aria-label="Karim Abdelaziz home">
+        <span>𝕂𝕒𝕣𝕚𝕞 𝔸𝕓𝕕𝕖𝕝𝕒𝕫𝕚𝕫 𝔽𝕒𝕣𝕠𝕦𝕜</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav" aria-label="Primary navigation">
         <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-          <span class="sr-only">Open menu</span>
-          <span class="hamburger" aria-hidden="true"></span>
+          <span></span><span></span>
         </button>
         <ul class="nav__menu" id="navMenu">
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Work</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact" class="nav__cta">Contact</a></li>
+          <li><a class="nav__cta" href="#contact">Let's talk <span>↗</span></a></li>
         </ul>
       </nav>
     </div>
@@ -42,182 +45,159 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="kicker">Web Developer</p>
-          <h1>
-            Hi, I’m <span class="accent">Karim Abdelaziz Farouk</span>
-            <span class="type" aria-label="Web developer"></span>
-          </h1>
-          <p class="lead">
-            <strong>
-              I Build Modern, Responsive Websites and Web Apps With Clean UI,
-              Solid Performance, and Maintainable Code.
-            </strong>
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span> Available for opportunities <span
+              style="margin-left:auto;color:#555">ALEXANDRIA · EG</span></div>
+          <h1>I build <em>digital experiences</em> that feel as good as they work.</h1>
+          <p class="hero__lead">
+            I'm Karim Abdelaziz, a web developer focused on responsive interfaces,
+            thoughtful interactions, solid performance, and maintainable code.
           </p>
 
-          <div class="hero__actions" role="group" aria-label="Primary actions">
-            <a class="btn btn--primary" href="#projects">View Projects</a>
-            <a class="btn btn--ghost" href="#contact">Let’s Connect</a>
+          <div class="hero__actions">
+            <a class="button button--solid" href="#projects">Explore my work <span>↘</span></a>
+            <a class="button button--line" href="mailto:kimolking9055888@gmail.com">Email me <span>↗</span></a>
           </div>
 
-          <div class="hero__meta" aria-label="Highlights">
-            <div class="meta-card">
-              <div class="meta-card__icon" aria-hidden="true">⚡</div>
-              <div>
-                <div class="meta-card__title">Performance-first</div>
-                <div class="meta-card__text">
-                  Fast, accessible, and SEO-friendly.
-                </div>
-              </div>
-            </div>
-
-            <div class="meta-card">
-              <div class="meta-card__icon" aria-hidden="true">🧩</div>
-              <div>
-                <div class="meta-card__title">Clean Architecture</div>
-                <div class="meta-card__text">
-                  Reusable Components and Scalable Patterns.
-                </div>
-              </div>
-            </div>
+          <div class="hero__facts">
+            <div><strong>01</strong><span>Clean<br>interfaces</span></div>
+            <div><strong>02</strong><span>Responsive<br>by default</span></div>
+            <div><strong>03</strong><span>Built to<br>perform</span></div>
           </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="avatar-glow"></div>
-          <div class="avatar">
-            <div class="avatar__inner">
-              <span class="avatar__initials">KARIM</span>
-              <span class="avatar__ring"></span>
-            </div>
+        <div class="hero__visual reveal reveal--delay" aria-hidden="true">
+          <div class="orb">
+            <div class="orb__core"><span>𝕂</span></div>
+            <div class="orb__ring orb__ring--one"></div>
+            <div class="orb__ring orb__ring--two"></div>
           </div>
-          <div class="floating-cards">
-            <div class="float-card float-card--1">
-              <div class="chip">HTML</div>
-              <div class="chip">CSS</div>
-              <div class="chip">JS</div>
-            </div>
-            <div class="float-card float-card--2">
-              <div class="chip">React</div>
-              <div class="chip">Node</div>
-              <div class="chip">APIs</div>
-            </div>
+
+          <div class="code-card code-card--top">
+            <span class="code-muted">const</span> <span class="code-accent">𝕂𝕒𝕣𝕚𝕞</span> = {<br>
+            &nbsp;&nbsp;focus: <span class="code-string">"Web"</span>,<br>
+            &nbsp;&nbsp;mindset: <span class="code-string">"Build"</span><br>
+            };
           </div>
+          <div class="code-card code-card--bottom">
+            <span>HTML</span><span>CSS</span><span>JS</span><span>Git</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticker" aria-label="Technologies">
+        <div class="ticker__track">
+          <span>WEB DEVELOPMENT</span><b>✦</b><span>JAVASCRIPT</span><b>✦</b><span>RESPONSIVE DESIGN</span><b>✦</b>
+          <span>APIS</span><b>✦</b><span>DEBUGGING</span><b>✦</b><span>WEB DEVELOPMENT</span><b>✦</b>
+          <span>JAVASCRIPT</span><b>✦</b><span>RESPONSIVE DESIGN</span><b>✦</b><span>APIS</span><b>✦</b>
         </div>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="container">
-        <div class="section__head">
-          <h2><strong>About Me</strong></h2>
-        </div>
-
-        <div class="grid grid--2">
-          <div class="card">
-            <h3>What I do</h3>
-            <p>
-              I Design and Develop User-Friendly Web Experiences — From
-              Landing Pages to Full Web Apps. I Focus on Responsive Layout,
-              Thoughtful Interactions, and Maintainable Code.
-            </p>
-            <ul class="list">
-              <li>UI Implementation With Modern CSS</li>
-              <li>JavaScript/TypeScript Development</li>
-              <li>Integration with APIs and back-end services</li>
-              <li>Accessibility and performance best practices</li>
-            </ul>
+        <div class="section-label reveal"><span>01</span><span>About</span></div>
+        <div class="about-grid">
+          <div class="about-intro reveal">
+            <h2>Good code is invisible.<br><em>Good design isn't.</em></h2>
           </div>
-
-          <div class="card">
-            <h3>Toolbox</h3>
-            <div class="pill-wrap" aria-label="Tech pills">
-              <span class="pill">HTML</span>
-              <span class="pill">CSS</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">Git</span>
-              <span class="pill">Responsive Design</span>
-              <span class="pill">UI/UX Mindset</span>
-              <span class="pill">Debugging</span>
-              <span class="pill">APIs</span>
-            </div>
-            <p class="muted" style="margin-top: 14px">
-              Want to see a specific stack? I can tailor projects to your
-              needs.
+          <div class="about-copy reveal reveal--delay">
+            <p class="large">
+              I enjoy turning ideas into interfaces that are simple to understand,
+              satisfying to use, and easy to maintain.
             </p>
+            <p class="muted">
+              My approach combines clean UI implementation, responsive layouts,
+              JavaScript development, API integration, accessibility, and a
+              strong debugging mindset.
+            </p>
+            <div class="tag-list">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+              <span>APIs</span><span>Responsive Design</span><span>Debugging</span><span>UI/UX</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section section--work" id="projects">
       <div class="container">
-        <div class="section__head">
-          <h2><strong>Projects</strong></h2>
+        <div class="section-label reveal"><span>02</span><span>Selected work</span></div>
+        <div class="work-heading reveal">
+          <h2>A few things I've<br><em>been building.</em></h2>
+          <p class="muted">A small selection of interfaces and web features.</p>
         </div>
 
         <div class="projects">
-          <article class="project card">
-            <div class="project__top">
-              <h3>Landing Page</h3>
-              <span class="badge">Responsive</span>
+          <article class="project project--featured reveal">
+            <div class="project__visual project__visual--landing">
+              <div class="mock-browser">
+                <div class="mock-top"><i></i><i></i><i></i><span>landing.page</span></div>
+                <div class="mock-body">
+                  <small>01 / LANDING PAGE</small>
+                  <strong>Make the<br><em>first impression</em><br>count.</strong>
+                  <div class="mock-line"></div>
+                </div>
+              </div>
             </div>
-            <p class="muted">
-              A modern landing page layout with smooth scrolling and
-              lightweight animations.
-            </p>
-            <ul class="mini">
-              <li>Clean sections + CTA</li>
-              <li>Accessible components</li>
-              <li>Performance-focused assets</li>
-            </ul>
-            <div class="project__actions">
-              <a class="btn btn--small btn--primary" href="#contact">Request Demo</a>
-              <a class="btn btn--small btn--ghost" href="https://github.com/Karim-Abdelaziz95" target="_blank"
-                rel="noopener">GitHub</a>
-            </div>
-          </article>
-
-          <article class="project card">
-            <div class="project__top">
-              <h3>Dashboard UI</h3>
-              <span class="badge badge--alt">UI/UX</span>
-            </div>
-            <p class="muted">
-              A dashboard-style interface with reusable cards, tables, and
-              filtering patterns.
-            </p>
-            <ul class="mini">
-              <li>Component-driven design</li>
-              <li>Theme-ready styling</li>
-              <li>Keyboard-friendly interactions</li>
-            </ul>
-            <div class="project__actions">
-              <a class="btn btn--small btn--primary" href="#contact">Ask for Details</a>
-              <a class="btn btn--small btn--ghost" href="https://github.com/Karim-Abdelaziz95" target="_blank"
-                rel="noopener">GitHub</a>
+            <div class="project__info">
+              <div class="project__number">01</div>
+              <div>
+                <h3>Landing Page</h3>
+                <p>Modern responsive layout with smooth scrolling, lightweight animation, accessible components, and
+                  performance-focused assets.</p>
+                <div class="project__tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <div class="project__actions">
+                  <a href="#contact" class="text-link">Request demo <span>↗</span></a>
+                  <a href="https://github.com/Karim-Abdelaziz95" target="_blank" rel="noopener" class="text-link">GitHub
+                    <span>↗</span></a>
+                </div>
+              </div>
             </div>
           </article>
 
-          <article class="project card">
-            <div class="project__top">
-              <h3>API Integration</h3>
-              <span class="badge">Full stack</span>
+          <article class="project reveal">
+            <div class="project__visual project__visual--dashboard">
+              <div class="dashboard">
+                <div class="dash-side"></div>
+                <div class="dash-content"><i></i><i></i><i></i>
+                  <div class="dash-chart"></div>
+                  <div class="dash-cards"><b></b><b></b><b></b></div>
+                </div>
+              </div>
             </div>
-            <p class="muted">
-              A web feature that fetches data, handles loading/error states,
-              and presents clean UI.
-            </p>
-            <ul class="mini">
-              <li>Async patterns</li>
-              <li>Error boundaries + UX polish</li>
-              <li>Secure data handling mindset</li>
-            </ul>
-            <div class="project__actions">
-              <a class="btn btn--small btn--primary" href="#contact">Talk Project</a>
-              <a class="btn btn--small btn--ghost" href="https://github.com/Karim-Abdelaziz95" target="_blank"
-                rel="noopener">GitHub</a>
+            <div class="project__info">
+              <div class="project__number">02</div>
+              <div>
+                <h3>Dashboard UI</h3>
+                <p>Reusable cards, tables, filtering patterns, keyboard-friendly interactions, and theme-ready styling.
+                </p>
+                <div class="project__tags"><span>UI/UX</span><span>Components</span></div>
+                <div class="project__actions"><a href="#contact" class="text-link">Ask for details <span>↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__visual project__visual--api">
+              <div class="api-window">
+                <span class="api-method">GET</span><span>/api/data</span>
+                <div class="api-row"><i></i><i></i><i></i></div>
+                <div class="api-row api-row--short"><i></i><i></i></div>
+                <div class="api-check">✓ 200 OK</div>
+              </div>
+            </div>
+            <div class="project__info">
+              <div class="project__number">03</div>
+              <div>
+                <h3>API Integration</h3>
+                <p>Async data fetching with loading and error states presented through a clean, user-friendly interface.
+                </p>
+                <div class="project__tags"><span>APIs</span><span>Async</span><span>UX</span></div>
+                <div class="project__actions"><a href="#contact" class="text-link">Talk project <span>↗</span></a></div>
+              </div>
             </div>
           </article>
         </div>
@@ -226,107 +206,47 @@
 
     <section class="section" id="skills">
       <div class="container">
-        <div class="section__head">
-          <h2><strong>Skills</strong></h2>
+        <div class="section-label reveal"><span>03</span><span>Skills</span></div>
+        <div class="skills-heading reveal">
+          <h2>Tools I use to<br><em>make things happen.</em></h2>
         </div>
 
-        <div class="skill-grid">
-          <div class="skill">
+        <div class="skills-list">
+          <div class="skill-row reveal"><span class="skill-index">01</span>
             <h3>Frontend</h3>
-            <p class="muted">
-              HTML, CSS, JavaScript, responsive layouts, accessibility.
-            </p>
-            <div class="meter" aria-label="Frontend proficiency">
-              <span class="meter__fill" style="width: 92%"></span>
-            </div>
+            <p>HTML · CSS · JavaScript · Responsive layouts · Accessibility</p><strong>CORE</strong>
           </div>
-
-          <div class="skill">
+          <div class="skill-row reveal"><span class="skill-index">02</span>
             <h3>UI Engineering</h3>
-            <p class="muted">
-              Component thinking, consistent design systems,
-              micro-interactions.
-            </p>
-            <div class="meter" aria-label="UI engineering proficiency">
-              <span class="meter__fill" style="width: 88%"></span>
-            </div>
+            <p>Component thinking · Design systems · Micro-interactions</p><strong>BUILD</strong>
           </div>
-
-          <div class="skill">
+          <div class="skill-row reveal"><span class="skill-index">03</span>
             <h3>Integration</h3>
-            <p class="muted">
-              API consumption, async flows, state handling, error UX.
-            </p>
-            <div class="meter" aria-label="Integration proficiency">
-              <span class="meter__fill" style="width: 80%"></span>
-            </div>
+            <p>APIs · Async flows · State handling · Error UX</p><strong>CONNECT</strong>
           </div>
-
-          <div class="skill">
+          <div class="skill-row reveal"><span class="skill-index">04</span>
             <h3>Quality</h3>
-            <p class="muted">
-              Maintainable code, performance tuning, clean commit history.
-            </p>
-            <div class="meter" aria-label="Quality proficiency">
-              <span class="meter__fill" style="width: 90%"></span>
-            </div>
+            <p>Debugging · Maintainable code · Performance · Git</p><strong>POLISH</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--contact" id="contact">
+    <section class="section contact-section" id="contact">
       <div class="container">
-        <div class="section__head">
-          <h2><strong>Contact</strong></h2>
-        </div>
-
-        <div class="contact">
-          <div class="card contact__card">
-            <h3>Get in touch</h3>
-            <p class="muted">Use the buttons below or send a message.</p>
-
-            <div class="contact__links" role="list">
-              <a class="contact-link" href="mailto:kimolking9055888@gmail.com" role="listitem">
-                <span aria-hidden="true">✉️</span>
-                <span>Email</span>
-              </a>
-              <a class="contact-link" href="https://github.com/Karim-Abdelaziz95" target="_blank" rel="noopener"
-                role="listitem">
-                <span aria-hidden="true">💻</span>
-                <span>GitHub</span>
-              </a>
-              <a class="contact-link" href="https://www.linkedin.com/in/karim-abdelaziz-4b9784421" target="_blank"
-                rel="noopener" role="listitem">
-                <span aria-hidden="true">🧠</span>
-                <span>LinkedIn</span>
-              </a>
+        <div class="contact-card reveal">
+          <div class="contact-card__top"><span>04 / CONTACT</span><span>LET'S BUILD SOMETHING</span></div>
+          <div class="contact-card__body">
+            <h2>Have an idea?<br><em>Let's make it real.</em></h2>
+            <a class="contact-email" href="mailto:kimolking9055888@gmail.com">kimolking9055888@gmail.com
+              <span>↗</span></a>
+            <div class="contact-links">
+              <a href="https://github.com/Karim-Abdelaziz95" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+              <a href="https://www.linkedin.com/in/karim-abdelaziz-4b9784421" target="_blank" rel="noopener">LinkedIn
+                <span>↗</span></a>
             </div>
           </div>
-
-          <form class="card contact__form" id="contactForm">
-            <h3>Quick message</h3>
-            <div class="form-row">
-              <label>
-                <span>Name</span>
-                <input type="text" name="name" autocomplete="name" placeholder="Your name" required />
-              </label>
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
-              </label>
-            </div>
-
-            <label>
-              <span>Message</span>
-              <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </label>
-
-            <button class="btn btn--primary" type="submit">
-              Send Message
-            </button>
-            <p class="form-status" id="formStatus" aria-live="polite"></p>
-          </form>
+          <div class="contact-orbit" aria-hidden="true"><span>𝕂</span></div>
         </div>
       </div>
     </section>
@@ -334,14 +254,10 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="muted">© 𝕂𝕒𝕣𝕚𝕞 𝔸𝕓𝕕𝕖𝕝𝕒𝕫𝕚𝕫 𝔽𝕒𝕣𝕠𝕦𝕜</span>
-      <div class="footer__right">
-        <a href="#top" class="to-top">Back to top ↑</a>
-      </div>
+      <span>© <span id="year"></span> 𝕂𝕒𝕣𝕚𝕞 𝔸𝕓𝕕𝕖𝕝𝕒𝕫𝕚𝕫 𝔽𝕒𝕣𝕠𝕦𝕜</span>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
-
-  <script src="script.js" defer></script>
 </body>
 
 </html>
