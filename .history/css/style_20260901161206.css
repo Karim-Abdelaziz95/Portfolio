@@ -211,22 +211,6 @@ h1 {
   line-height: 1.06;
   letter-spacing: -0.03em;
 }
-
-h2 {
-  margin: 0;
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: #4361ee;
-}
-
-h3 {
-  margin: 0;
-  font-size: clamp(1.2rem, 1.6vw + 0.8rem, 1.5rem);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: #4cc9f0;
-}
 .accent {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   -webkit-background-clip: text;
